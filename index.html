@@ -24,6 +24,11 @@
             margin-right: auto;
             
         }
+        @media screen and (max-width: 500px) {
+            .center{
+                width: 90%;
+            }
+        }
         input {
             color: brown;
             border: solid 2px brown;
@@ -32,6 +37,7 @@
             padding: 10px;
             margin: 6px;
             text-align: center;
+            outline: none;
         }
         div {
             margin-top: 12px;
@@ -46,6 +52,8 @@
             margin-bottom: -30px;
             position: relative;
             z-index: 4;
+            font: bold 14px arial;
+            width: auto;
         }
     
         #res {
@@ -60,23 +68,31 @@
             padding-top: 30px;
             padding-bottom: 5px;
             font: normal 14px arial;            
+        }
+        .titulo{
+            background-color: brown;
+            color: white;
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 25px;
         }    
     </style>
 </head>
 <body>
     <div class="center">
-    <h1>Orçamento de Adesivos</h1>
-    <h3> Tamanho do adesivo</h3>
-    <input type="number" name="txtn1" id="txtn1"><strong> X</strong>
-    <input type="number" name="txtn2" id="txtn2">
-    <h3> Quantidade de adesivos </h3>   
-    <input type="number" name="txtn3"id="txtn3"></br>
-    <h3> Valor do metro de adesivo </h3>
-    <input type="number" name="txtn4" id="txtn4"></br>
+        <h3 class="titulo">ORÇAMENTO DE <br>ADESIVOS POR METRO</h3>
+        <h3> Tamanho do adesivo</h3>
+        <input type="number" name="txtn1" id="txtn1"><strong> X</strong>
+        <input type="number" name="txtn2" id="txtn2">
+        <h3> Quantidade de adesivos </h3>   
+        <input type="number" name="txtn3"id="txtn3"></br>
+        <h3> Valor do metro de adesivo </h3>
+        <input type="number" name="txtn4" id="txtn4"></br>
     
-    <input id="calc" type="button" value="Calcular" onclick="multiplicar()">
+        <input id="calc" type="button" value="CALCULAR" onclick="multiplicar()">
 
-    <div id="res"><strong>Total R$</strong></div>
+        <div id="res"><strong>Total R$</strong></div>
         
     </div>
     <script>
